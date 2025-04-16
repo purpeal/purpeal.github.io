@@ -5,3 +5,8 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+package-lock.json
+package.json
+.DS_Store
+playwright.config.ts
+tests/coursework-sample.spec.js
