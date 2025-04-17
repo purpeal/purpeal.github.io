@@ -13,7 +13,7 @@
       <h1 id="heading">People Search</h1>
       <nav>
         <ul class="navbar">
-          <li><a href="index.html">People search</a></li>
+          <li>People search</li>
           <li><a href="vehiclesearch.html">Vehicle search</a></li>
           <li><a href="addavehicle.html">Add a vehicle</a></li>
         </ul>
@@ -22,13 +22,20 @@
     <aside></aside>
     <main>
       <form>
-        <p>Search by driver name <input id="name" type="text" /></p>
         <p>
-          Search by driving license number <input id="license" type="text" />
+          Search by driver name <input id="name" type="text" label="name" />
+        </p>
+        <p>
+          Search by driving license number
+          <input id="license" type="text" label="license" />
         </p>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit">Submit</button>
+        <p id="message"></p>
       </form>
+      <div id="results">
+        <div></div>
+      </div>
     </main>
     <footer></footer>
   </body>

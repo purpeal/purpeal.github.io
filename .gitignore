@@ -11,3 +11,5 @@ package.json
 playwright.config.ts
 tests/coursework-sample.spec.js
 .hintrc
+docs/script.js
+docs/peoplesearch.html

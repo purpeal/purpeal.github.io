@@ -6,24 +6,28 @@
 }
 
 header {
+  grid-column: 1 / -1;
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
 }
 
 main {
+  grid-column: 2 / 3;
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
 }
 
 aside {
+  grid-column: 1 / 2;
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
 }
 
 footer {
+  grid-column: 1 / -1;
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
@@ -31,4 +35,14 @@ footer {
 
 #heading {
   text-align: center;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 4fr;
+}
+
+#results {
+    border: 1px solid black;
 }
