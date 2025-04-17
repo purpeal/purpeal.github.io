@@ -10,3 +10,4 @@ package.json
 .DS_Store
 playwright.config.ts
 tests/coursework-sample.spec.js
+.hintrc

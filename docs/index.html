@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>People Search</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module"></script>
   </head>
 
   <body>
     <header>
-      <h1>People Search</h1>
+      <h1 id="heading">People Search</h1>
       <nav>
         <ul class="navbar">
-          <li>People Search</li>
-          <li>Vehicle Search</li>
-          <li>Add a vehicle</li>
+          <li><a href="index.html">People search</a></li>
+          <li><a href="vehiclesearch.html">Vehicle search</a></li>
+          <li><a href="addavehicle.html">Add a vehicle</a></li>
         </ul>
       </nav>
     </header>
     <aside></aside>
-    <main></main>
+    <main>
+      <form>
+        <p>Search by driver name <input id="name" type="text" /></p>
+        <p>
+          Search by driving license number <input id="license" type="text" />
+        </p>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
     <footer></footer>
   </body>
 </html>
