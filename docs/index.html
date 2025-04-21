@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>People Search</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" type="module"></script>
+    <script src="scriptindex.js" type="module"></script>
   </head>
 
   <body>
@@ -21,21 +21,21 @@
     </header>
     <aside></aside>
     <main>
-      <form>
+      <form name="form">
         <p>
-          Search by driver name <input id="name" type="text" label="name" />
+          <label for="name">Search by driver name</label>
+          <input id="name" type="text" label="name" name="name" />
         </p>
         <p>
-          Search by driving license number
-          <input id="license" type="text" label="license" />
+          <label for="license">Search by driving license number</label>
+          <input id="license" type="text" label="license" name="license" />
         </p>
         <br />
-        <button type="submit" id="submit">Submit</button>
+        <button type="button" id="Submit">Submit</button>
         <p id="message"></p>
       </form>
-      <div id="results">
-        <div></div>
-      </div>
+      <p id="message"></p>
+      <div id="results"></div>
     </main>
     <footer></footer>
   </body>
