@@ -25,6 +25,8 @@ async function formLogic() {
   const main = document.querySelector("#message");
   const results = document.querySelector("#results");
 
+  results.innerHTML = "";
+
   if (name == "" && license == "") {
     main.textContent = "Error";
   } else if (name != "" && license != "") {
