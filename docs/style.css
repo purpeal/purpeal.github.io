@@ -5,6 +5,22 @@
   justify-content: center;
 }
 
+.navbar li a {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  background-color: #5865f2;
+}
+
+header,
+main,
+aside,
+footer {
+  background-color: #404bbf;
+}
+
 header {
   grid-column: 1 / -1;
   border: 1px solid black;
@@ -57,4 +73,50 @@ body {
 
 #results div p {
   font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  color: white;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 500px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  header {
+    grid-column: 1 / -1;
+  }
+
+  main {
+    grid-column: 1 / -1;
+  }
+
+  aside {
+    grid-column: 1 / 2;
+    width: 20%;
+    float: left;
+    margin: 0 0 10px 10px;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    width: 75%;
+    float: left;
+    margin: 0 0 10px 10px;
+  }
 }

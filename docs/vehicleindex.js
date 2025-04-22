@@ -7,7 +7,7 @@ const supabase = createClient(
 
 async function fetchData(column, search) {
   const { data, error } = await supabase
-    .from("People")
+    .from("Vehicles")
     .select()
     .ilike(column, "%" + search + "%");
   if (error) {
@@ -20,39 +20,18 @@ async function fetchData(column, search) {
 }
 
 async function formLogic() {
-  const name = document.forms["form"]["name"].value;
-  const license = document.forms["form"]["license"].value;
+  const license = document.forms["form"]["rego"].value;
   const main = document.querySelector("#message");
   const results = document.querySelector("#results");
 
   results.innerHTML = "";
   main.innerHTML = "";
 
-  if (name == "" && license == "") {
-    main.textContent = "Error";
-  } else if (name != "" && license != "") {
+  if (license == "") {
     main.textContent = "Error";
   } else {
-    if (document.forms["form"]["name"].value != "") {
-      const searchData = await fetchData("Name", name);
-      if (searchData.length == 0) {
-        main.textContent = "No result found";
-      } else {
-        main.textContent = "Search successful";
-        for (let i = 0; i < searchData.length; i++) {
-          const resultsDiv = document.createElement("div");
-          const resultsText = document.createElement("pre");
-          let entryText = "";
-          for (const key in searchData[i]) {
-            entryText += `${key}: ${searchData[i][key]}\n`;
-          }
-          resultsText.textContent = entryText;
-          resultsDiv.appendChild(resultsText);
-          results.appendChild(resultsDiv);
-        }
-      }
-    } else {
-      const searchData = await fetchData("LicenseNumber", license);
+    if (document.forms["form"]["rego"].value != "") {
+      const searchData = await fetchData("VehicleID", license);
       if (searchData.length == 0) {
         main.textContent = "No result found";
       } else {
