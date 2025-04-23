@@ -33,7 +33,7 @@ async function formLogic() {
   } else if (name != "" && license != "") {
     main.textContent = "Error";
   } else {
-    if (document.forms["form"]["name"].value != "") {
+    if (name != "") {
       const searchData = await fetchData("Name", name);
       if (searchData.length == 0) {
         main.textContent = "No result found";
