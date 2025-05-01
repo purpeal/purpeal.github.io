@@ -22,7 +22,7 @@
     <aside><img src="jojo.jpg" alt="Jotaro Kujo" /></aside>
     <main>
       <h2>Fill in all the fields</h2>
-      <form name="form">
+      <form name="vehicle-form">
         <p>
           <label for="rego">Vehicle Registration/Plate Number: </label>
           <input id="rego" type="text" label="rego" name="rego" />
@@ -46,6 +46,33 @@
           </p>
           <button type="button" id="check">Check owner</button>
         </div>
+        <button type="button" id="new-owner">New owner</button>
+        <div id="owner-results"></div>
+        <button type="button" id="add-vehicle">Add vehicle</button>
+      </form>
+      <form id="people-form">
+        <p>
+          <label for="name">Owner Name: </label>
+          <input id="name" type="text" label="name" name="name" />
+        </p>
+        <p>
+          <label for="address">Owner Address: </label>
+          <input id="address" type="text" label="address" name="address" />
+        </p>
+        <p>
+          <label for="dob">Owner Date of Birth: </label>
+          <input id="dob" type="date" label="dob" name="dob" />
+        </p>
+        <p>
+          <label for="license">Owner's License: </label>
+          <input id="license" type="text" label="license" name="license" />
+        </p>
+        <p>
+          <label for="expire">Owner License Expiry Date: </label>
+          <input id="expire" type="date" label="expire" name="expire" />
+        </p>
+        <button type="button" id="add-owner">Add owner</button>
+        <p id="message-owner"></p>
       </form>
     </main>
     <footer></footer>

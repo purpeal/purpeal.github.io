@@ -25,6 +25,7 @@ async function formLogic() {
   const main = document.querySelector("#message");
   const results = document.querySelector("#results");
 
+  results.style.display = "flex";
   results.innerHTML = "";
   main.innerHTML = "";
 
