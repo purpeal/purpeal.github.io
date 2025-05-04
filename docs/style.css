@@ -116,6 +116,10 @@ img {
   display: none;
 }
 
+#add-vehicle {
+  margin: 3px;
+}
+
 @media (max-width: 500px) {
   body {
     display: grid;

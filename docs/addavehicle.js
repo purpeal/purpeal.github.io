@@ -65,6 +65,7 @@ document.getElementById("check").addEventListener("click", async () => {
           selectButton.addEventListener("click", () => {
             selectedOwner = searchData[i][key];
             hasOwner = true;
+            document.getElementById("add-vehicle").style.display = "inline";
             console.log(hasOwner);
           });
         }
@@ -124,8 +125,43 @@ document.getElementById("add-owner").addEventListener("click", async () => {
     LicenseNumber: license,
     ExpiryDate: expire,
   });
+
+  selectedOwner = data.length + 1;
+
   if (insertError) {
     message.textContent = "Error";
     console.log(insertError);
+  } else {
+    document.getElementById("add-vehicle").style.display = "inline";
+    hasOwner = true;
+    message.textContent = "Owner added successfully";
+  }
+});
+
+document.getElementById("add-vehicle").addEventListener("click", async () => {
+  const rego = document.forms["vehicle-form"]["rego"].value;
+  const make = document.forms["vehicle-form"]["make"].value;
+  const model = document.forms["vehicle-form"]["model"].value;
+  const colour = document.forms["vehicle-form"]["colour"].value;
+  const messageVehicle = document.querySelector("#message-vehicle");
+
+  if (rego == "" || make == "" || model == "" || colour == "") {
+    messageVehicle.textContent = "Error";
+    return;
+  }
+
+  const { error: insertError } = await supabase.from("Vehicles").insert({
+    VehicleID: rego,
+    Make: make,
+    Model: model,
+    Colour: colour,
+    OwnerID: selectedOwner,
+  });
+
+  if (insertError) {
+    message.textContent = "Error";
+    console.log(insertError);
+  } else {
+    message.textContent = "Owner added successfully";
   }
 });

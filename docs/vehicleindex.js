@@ -58,13 +58,18 @@ async function formLogic() {
           let entryText = "";
           for (const key in searchData[i]) {
             if (key == "OwnerID") {
-              const peopleSearch = await fetchDataSpecific(
-                "People",
-                "PersonID",
-                searchData[i][key]
-              );
-              entryText += `Name of Owner: ${peopleSearch[0]["Name"]}\n`;
-              break;
+              if (searchData[i][key] == null) {
+                entryText += "Name of Owner: null";
+                break;
+              } else {
+                const peopleSearch = await fetchDataSpecific(
+                  "People",
+                  "PersonID",
+                  searchData[i][key]
+                );
+                entryText += `Name of Owner: ${peopleSearch[0]["Name"]}\n`;
+                break;
+              }
             }
             entryText += `${key}: ${searchData[i][key]}\n`;
           }
