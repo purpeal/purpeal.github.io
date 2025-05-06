@@ -159,9 +159,9 @@ document.getElementById("add-vehicle").addEventListener("click", async () => {
   });
 
   if (insertError) {
-    message.textContent = "Error";
+    messageVehicle.textContent = "Error";
     console.log(insertError);
   } else {
-    message.textContent = "Vehicle added successfully";
+    messageVehicle.textContent = "Vehicle added successfully";
   }
 });
