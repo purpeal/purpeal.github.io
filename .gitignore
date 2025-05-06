@@ -15,3 +15,4 @@ docs/script.js
 docs/peoplesearch.html
 .idea/workspace.xml
 .vscode/settings.json
+tests/addavehiclepagetest.spec.js

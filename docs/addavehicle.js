@@ -162,6 +162,6 @@ document.getElementById("add-vehicle").addEventListener("click", async () => {
     message.textContent = "Error";
     console.log(insertError);
   } else {
-    message.textContent = "Owner added successfully";
+    message.textContent = "Vehicle added successfully";
   }
 });
