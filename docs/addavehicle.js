@@ -26,9 +26,9 @@ async function fetchData(table, column, search) {
 
 ownerInput.addEventListener("input", () => {
   if (ownerInput.value.trim() !== "") {
-    checkButton.style.display = "inline";
+    checkButton.disabled = false;
   } else {
-    checkButton.style.display = "none";
+    checkButton.disabled = true;
   }
 });
 
